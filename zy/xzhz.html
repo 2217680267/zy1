@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				perspective: 1000px;
+			}
+			.box{
+				/* transition: 5s; */
+				transform-style: preserve-3d;
+				position:relative;
+				margin: 50px auto;
+				width: 600px;
+				height: 600px;
+				animation: rorate 4s linear infinite;
+			}
+			.box .a{
+				background: currentcolor;
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				left: 50%;
+				top: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+				
+			}
+			.box .b{
+				background: currentcolor;
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -100px;
+				/* animation: move 4s linear infinite; */
+			}
+			.box:hover .a{
+				box-shadow: 0px 0px 10px currentcolor;
+			}
+			.box .b1{
+				color: darkgray;
+				transform: translateZ(100px);
+				opacity: 0.5;
+				animation: qian 2s linear infinite alternate-reverse;
+			}
+			.box .b2{
+				color: darkgray;
+				transform: rotateY(180deg) translateZ(100px);
+				opacity: 0.5;
+				animation: hou 2s linear infinite alternate-reverse;
+			}
+			.box .b3{
+				color: darkgray;
+				transform: rotateX(90deg) translateZ(100px);
+				opacity: 0.5;
+				animation: shang 2s linear infinite alternate-reverse;
+			}
+			.box .b4{
+				color: darkgray;
+				transform: rotateX(-90deg) translateZ(100px);
+				opacity: 0.5;
+				animation: xia 2s linear infinite alternate-reverse;
+			}
+			.box .b5{
+				color: darkgray;
+				transform: rotateY(90deg) translateZ(100px);
+				opacity: 0.5;
+				animation: zuo 2s linear infinite alternate-reverse;
+			}
+			.box .b6{
+				color: darkgray;
+				transform: rotateY(-90deg) translateZ(100px);
+				opacity: 0.5;
+				animation: you 2s linear infinite alternate-reverse;
+			}
+			.box .a1{
+				color: #00FFFF;
+				transform: translateZ(50px);
+			}
+			.box .a2{
+				color: #7FFF00;
+				transform: rotateY(180deg) translateZ(50px);
+			}
+			.box .a3{
+				color: #9988DD;
+				transform: rotateX(90deg) translateZ(50px);
+			}
+			.box .a4{
+				color: #FFFF00;
+				transform: rotateX(-90deg) translateZ(50px);
+			}
+			.box .a5{
+				color: cornflowerblue;
+				transform: rotateY(90deg) translateZ(50px);
+			}
+			.box .a6{
+				color: darkcyan;
+				transform: rotateY(-90deg) translateZ(50px);
+			}
+			@keyframes rorate{
+				0%{
+					transform: rotate(0);
+				}
+				100%{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+			@keyframes qian{
+				0%{
+					transform: translateZ(100px);
+				}
+				100%{
+					transform: translateZ(200px);
+				}
+			}
+			@keyframes hou{
+				0%{
+					transform: translateZ(-100px);
+				}
+				100%{
+					transform: translateZ(-200px);
+				}
+			}
+			@keyframes shang{
+				0%{
+					transform: translateX(100px) rotateY(90deg);
+				}
+				100%{
+					transform: translateX(200px) rotateY(90deg);
+				}
+			}
+			@keyframes xia{
+				0%{
+					transform: translateX(-100px) rotateY(-90deg);
+				}
+				100%{
+					transform: translateX(-200px) rotateY(-90deg);
+				}
+			}
+			@keyframes zuo{
+				0%{
+					transform: translateY(100px) rotateX(90deg);
+				}
+				100%{
+					transform: translateY(200px) rotateX(90deg);
+				}
+			}
+			@keyframes you{
+				0%{
+					transform: translateY(-100px) rotateX(-90deg);
+				}
+				100%{
+					transform: translateY(-200px) rotateX(-90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="b b1"></div>
+			<div class="b b2"></div>
+			<div class="b b3"></div>
+			<div class="b b4"></div>
+			<div class="b b5"></div>
+			<div class="b b6"></div>
+			<div class="a a1">前</div>
+			<div class="a a2">后</div>
+			<div class="a a3">上</div>
+			<div class="a a4">下</div>
+			<div class="a a5">左</div>
+			<div class="a a6">右</div>
+		</div>
+	</body>
+</html>
